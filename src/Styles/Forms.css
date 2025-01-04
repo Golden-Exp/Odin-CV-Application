@@ -1,0 +1,31 @@
+h2 {
+    padding-left: 5px;
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+
+input {
+    font-size: 17px;
+    border-radius: 10px;
+    background-color: wheat;
+    color: black;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+}
+
+button {
+    margin-right: 20px;
+    margin-bottom: 30px;
+}

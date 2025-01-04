@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+}
+.forms {
+  width: 40vw;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.resume {
+  background-color: white;
+  width: 60vw;
+}
