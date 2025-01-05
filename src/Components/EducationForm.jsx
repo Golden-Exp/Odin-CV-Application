@@ -9,7 +9,9 @@ function Education() {
     return (
         EducationButton ? 
         <div className="edu">
-        <button className="head" onClick={clickHeading}>Educational Information</button>
+        <button className="head" onClick={clickHeading}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu-up</title><path d="M7,15L12,10L17,15H7Z" /></svg>
+        Educational Information</button>
         <form method="post">
             <div className="field">
                 <label >School Name</label>
@@ -29,7 +31,7 @@ function Education() {
         </div>
         :
         <div>
-            <button className="head" onClick={clickHeading}>Educational Information</button>
+            <button className="head" onClick={clickHeading}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu-down</title><path d="M7,10L12,15L17,10H7Z" /></svg>Educational Information</button>
         </div>
     )
 }

@@ -16,6 +16,11 @@ input {
     color: black;
 }
 
+input:focus {
+    outline: none;
+    border: 2px solid white
+}
+
 .field {
     display: flex;
     flex-direction: column;
@@ -26,7 +31,7 @@ label {
 }
 
 button {
-    margin-right: 20px;
+    margin-right: 30%;
     margin-bottom: 30px;
 }
 
@@ -38,4 +43,14 @@ button {
     padding: 4px;
     margin-left: 10px;
     font-weight: 700;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+svg {
+    height: 30px;
+    width: 30px;
+    fill: white;
+    margin-right: 10px;
 }

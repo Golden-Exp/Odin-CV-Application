@@ -1,0 +1,23 @@
+.Resumecontainer {
+    background-color: black;
+    width: 40vw;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: wheat;
+    text-align: center;
+    margin-right: 100px;
+}
+
+.preview {
+    width: 50vw;
+    height: 110vh;
+    background-color: white;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
