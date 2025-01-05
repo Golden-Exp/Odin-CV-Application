@@ -1,8 +1,15 @@
 import "../Styles/Forms.css"
+import { useState } from "react"
 function Experience() {
+    const [ExperienceButton, setExperience] = useState(false)
+    const clickHeading = () => {
+        var newval = !(ExperienceButton)
+        setExperience(newval)
+    }
     return (
+        ExperienceButton ?
         <div className="exp">
-        <h2>Practical Experience Information</h2>
+        <button className="head" onClick={clickHeading}>Practical Experience Information</button>
         <form method="post">
             <div className="field">
                 <label >Company Name</label>
@@ -23,6 +30,10 @@ function Experience() {
         </form>
         <button>Edit</button>
         <button>Submit</button>
+        </div>
+        :
+        <div>
+            <button className="head" onClick={clickHeading}>Practical Experience Information</button>
         </div>
     )
 }

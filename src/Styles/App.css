@@ -1,13 +1,15 @@
 .container {
   display: flex;
+  box-sizing: border-box;
 }
 .forms {
-  width: 40vw;
-  padding: 1em;
+  width: 40%;
+  height: 100vh;
   box-sizing: border-box;
 }
 
 .resume {
   background-color: white;
   width: 60vw;
+  height: 100vh;
 }

@@ -1,8 +1,18 @@
 import "../Styles/Forms.css"
+import { useState } from "react"
 function General() {
+    const [GeneralButton, setGeneral] = useState(false)
+    const clickHeading = () => {
+        var newval = !(GeneralButton)
+        setGeneral(newval)
+    }
     return (
+        GeneralButton ?
         <div className="gen">
-        <h2>General Information</h2>
+        <button 
+        className="head"
+        onClick={clickHeading}
+        >General Information</button>
         <form method="post">
             <div className="field">
                 <label >First Name</label>
@@ -23,6 +33,10 @@ function General() {
         </form>
         <button>Edit</button>
         <button>Submit</button>
+        </div>
+        : 
+        <div>
+            <button className="head" onClick={clickHeading}>General Information</button>
         </div>
     )
 }

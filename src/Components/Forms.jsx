@@ -2,7 +2,7 @@ import General from "./GeneralForm";
 import Education from "./EducationForm";
 import Experience from "./ExperienceForm";
 
-function Forms() {
+function Forms({GeneralButton, EducationButton, ExperienceButton, setGeneral, setEducation, setExperience}) {
     return (
         <>
             <General />
