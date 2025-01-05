@@ -2,10 +2,10 @@ import General from "./GeneralForm";
 import Education from "./EducationForm";
 import Experience from "./ExperienceForm";
 
-function Forms() {
+function Forms({SavedGeneral, saveGeneral}) {
     return (
         <>
-            <General />
+            <General SavedGeneral={SavedGeneral} saveGeneral={saveGeneral} />
             <Education />
             <Experience />
         </>

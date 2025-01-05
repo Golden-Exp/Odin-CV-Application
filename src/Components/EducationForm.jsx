@@ -26,8 +26,8 @@ function Education() {
                 <input type="email" />
             </div>
         </form>
-        <button>Edit</button>
-        <button>Submit</button>
+        <button>Cancel</button>
+        <button>Save</button>
         </div>
         :
         <div>

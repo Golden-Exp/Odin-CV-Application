@@ -4,7 +4,7 @@ h2 {
 form {
     display: flex;
     flex-wrap: wrap;
-    gap: 35px;
+    gap: 40px;
     margin-left: 10px;
     margin-bottom: 40px;
 }
@@ -53,4 +53,10 @@ svg {
     width: 30px;
     fill: white;
     margin-right: 10px;
+}
+
+.op {
+    font-size: 30px;
+    font-weight: 700;
+    margin-right: 20px;
 }
