@@ -16,7 +16,8 @@ function General({ SavedGeneral, saveGeneral }) {
         const value = e.target.value
         setTempGeneral((prevSave) => ({...prevSave, [field]: value}))
     }
-    const onSubmit = () => {
+    const onSubmit = (e) => {
+        e.preventDefault()
         setSaved(true)
         saveGeneral(TempGeneralInfo)
     }
@@ -27,6 +28,7 @@ function General({ SavedGeneral, saveGeneral }) {
         GeneralButton ?
         saved ?
         <div>
+            <h2>General Information</h2>
             <form method="post">
             <div className="field">
                 <label >First Name</label>
@@ -54,10 +56,10 @@ function General({ SavedGeneral, saveGeneral }) {
         onClick={clickHeading}
         ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu-up</title><path d="M7,15L12,10L17,15H7Z" /></svg>
         General Information</button>
-        <form>
+        <form method="get">
             <div className="field">
                 <label >First Name</label>
-                <input type="text" name="FirstName" defaultValue={SavedGeneral.FirstName} onChange={handleChange}/>
+                <input type="text" name="FirstName" defaultValue={SavedGeneral.FirstName} onChange={handleChange} required/>
             </div>
             <div className="field">
                 <label >Last Name</label>
@@ -71,9 +73,9 @@ function General({ SavedGeneral, saveGeneral }) {
                 <label >Phone Number</label>
                 <input type="tel" pattern="[0-9]{10}" name="PhoneNumber" defaultValue={SavedGeneral.PhoneNumber} onChange={handleChange}/>
             </div>
+            <button onClick={onCancel}>Cancel</button>
+            <button type="submit" onClick={onSubmit}>Save</button>
         </form>
-        <button onClick={onCancel}>Cancel</button>
-        <button onClick={onSubmit}>Save</button>
         </div>
         :
         <div>
