@@ -5,9 +5,9 @@ import { useState } from 'react'
 
 function App() {
 
-  const [SavedGeneral, saveGeneral] = useState({saved:false})
-  const [SavedExperience, saveExperience] = useState({saved:false})
-  const [SavedEducation, saveEducation] = useState({saved:false})
+  const [SavedGeneral, saveGeneral] = useState({})
+  const [SavedExperience, saveExperience] = useState([])
+  const [SavedEducation, saveEducation] = useState([])
   return (
     <div className="container">
       <div className="forms">
