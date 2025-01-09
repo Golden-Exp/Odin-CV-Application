@@ -6,12 +6,6 @@
     box-sizing: border-box;
 }
 
-h1 {
-    color: wheat;
-    text-align: center;
-    margin-right: 100px;
-}
-
 .preview {
     width: 50vw;
     height: 110vh;
@@ -20,4 +14,114 @@ h1 {
     margin-top: 20px;
     margin-bottom: 20px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.others {
+    height:85%;
+}
+
+.header {
+    height: 15%;
+    background-color: wheat;
+    text-align: center;
+    align-items: center;
+}
+
+.header > h1 {
+    color: black;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.cont > svg {
+    width: 30px;
+    fill: black;
+    height: 30px;
+}
+
+.info {
+    height: 5%;
+    background-color: wheat;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont {
+    display: flex;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: black;
+    font-size: 20px;
+}
+
+.eduField {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tit {
+    font-size: 30px;
+}
+
+.inst {
+    display: flex;
+    flex-direction: column;
+}
+
+.edu {
+    text-align: center;
+}
+
+.edu > h1 {
+    color: black;
+    font-size: 40px;
+}
+
+.expField {
+    color: black;
+    display: flex;
+    flex-direction: column ;
+    text-align: left;
+    gap: 0;
+    margin-bottom: 40px;
+}
+
+.expField > h2 {
+    font-size: 30px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.roles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.roles > h4 {
+    margin: 0;
+    margin-left: 10px;
+}
+
+.roles > h5 {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.desc {
+    margin-left: 10px;
+}
+
+.exp {
+    text-align: center;
+}
+
+.exp > h1 {
+    color: black;
+    font-size: 40px;
 }

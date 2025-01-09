@@ -21,7 +21,11 @@ function App() {
         />
       </div>
       <div className='resume'>
-        <Resume />
+        <Resume
+          SavedGeneral={SavedGeneral}
+          SavedEducation={SavedEducation}
+          SavedExperience={SavedExperience}
+        />
       </div>
     </div>
   )

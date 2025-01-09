@@ -56,11 +56,11 @@ function Experience({ SavedExperience, saveExperience }) {
                     </div>
                     <div className="field">
                         <label>Start date</label>
-                        <input name="StartDate" defaultValue={NewExp.StartDate} onChange={handleChange} ></input>
+                        <input name="StartDate" defaultValue={NewExp.StartDate} onChange={handleChange} placeholder="DD/MM/YY" ></input>
                     </div>
                     <div className="field">
                         <label>End Date</label>
-                        <input name="EndDate" defaultValue={NewExp.EndDate} onChange={handleChange} ></input>
+                        <input name="EndDate" defaultValue={NewExp.EndDate} placeholder="DD/MM/YY" onChange={handleChange} ></input>
                     </div>
                 </form>
                 <button onClick={clickCancel} >Cancel</button>
