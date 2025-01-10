@@ -14,10 +14,21 @@ function Experience({ SavedExperience, saveExperience }) {
             setNewExp((prevSave) => ({...prevSave, [field]:value}))
         }
         const clickSave = () => {
+            if ('id' in NewExp){
+                saveExperience((prevSave) =>
+                    prevSave.map(item => 
+                        item.id === NewExp.id ? NewExp : item
+                    ) 
+                )
+                setEdit(false)
+            }
+            else {
             const institute = {...NewExp, id:crypto.randomUUID()}
             saveExperience((prevSave) => [...prevSave, institute])
             setEdit(false)
+            }
         }
+        
         const clickAdd = () => {
             setNewExp({})
             setEdit(true)
@@ -30,6 +41,12 @@ function Experience({ SavedExperience, saveExperience }) {
 
         const clickDelete = (id) => {
             saveExperience((prevSave) => prevSave.filter((item) => item.id != id))
+        }
+
+        const clickEdit = (id) => {
+            const inst =  SavedExperience.find((institue) => institue.id === id)
+            setNewExp(inst)
+            setEdit(true)
         }
 
         return (
@@ -72,7 +89,7 @@ function Experience({ SavedExperience, saveExperience }) {
                 <ul className="list" >
                     {SavedExperience.map((institute) => (
                         <li key={institute.id} >
-                            <button className="ListButton">{institute.CompanyName}</button>
+                            <button className="ListButton" onClick={() => clickEdit(institute.id)} >{institute.CompanyName}</button>
                             <button className="ListButton" onClick={() => clickDelete(institute.id)} ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete</title><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg></button>
                         </li>
                     ))}
